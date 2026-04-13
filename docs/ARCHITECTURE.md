@@ -66,8 +66,8 @@ A `<canvas>` element rendered by Pixi.js sits behind the story preview. Ink tags
 ### Howler.js — Audio (Planned Phase 2)
 Ink tags (e.g., `# music: campfire`) trigger Howler sound loads and plays. Audio manifest is managed in a separate `lib/audio.ts` module.
 
-### Scatter Academy Integration (Planned Phase 3)
-Narrative games authored in Scatter Game can be embedded in Scatter Academy as interactive story lessons.
+### Scatter Schools Integration (Planned Phase 3)
+Narrative games authored in Scatter Game can be embedded in Scatter Schools as interactive story lessons.
 
 ---
 
@@ -87,5 +87,5 @@ Narrative games authored in Scatter Game can be embedded in Scatter Academy as i
 
 - Phase 1 (current): Ink script editor, lightweight preview parser, character/asset sidebar scaffold, inkjs integration in `lib/ink-engine.ts`
 - Phase 2: Ink compile pipeline (WASM Inklecate), full inkjs playback, Pixi.js visual layer, Howler.js audio layer, dialogue tree visualization
-- Phase 3: Asset upload and management, save/load story projects, Scatter Academy embed mode
+- Phase 3: Asset upload and management, save/load story projects, Scatter Schools embed mode
 - Phase 4: Multiplayer story sessions, branching analytics, Scatter Studio integration

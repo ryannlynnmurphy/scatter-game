@@ -64,7 +64,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for data models, component inte
 - [scatter-write](https://github.com/ryannlynnmurphy/scatter-write) — Writing environment
 - [scatter-stream](https://github.com/ryannlynnmurphy/scatter-stream) — Stream production
 - [scatter-draft](https://github.com/ryannlynnmurphy/scatter-draft) — Script drafting
-- [scatter-academy](https://github.com/ryannlynnmurphy/scatter-academy) — Education platform
+- [scatter-schools](https://github.com/ryannlynnmurphy/scatter-schools) — Education platform
 
 ---
 
