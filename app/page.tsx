@@ -88,6 +88,30 @@ export default function GamePage() {
           Scatter Game
         </h1>
         <span style={{ color: "#888", fontSize: "0.8rem" }}>Narrative Engine</span>
+        <span style={{ color: "#555", fontSize: "0.68rem", marginLeft: "0.5rem" }}>
+          Dev: use port <strong style={{ color: "#888" }}>3000</strong> only —{" "}
+          <a href="/sureality" style={{ color: "#C9A96E" }}>
+            /sureality
+          </a>{" "}
+          ·{" "}
+          <a href="/api/scatter-health" style={{ color: "#888" }}>
+            health
+          </a>
+        </span>
+        <a
+          href="/sureality"
+          style={{
+            marginLeft: "1rem",
+            color: "#C9A96E",
+            fontSize: "0.75rem",
+            fontWeight: 600,
+            letterSpacing: "0.12em",
+            textDecoration: "none",
+            fontFamily: "'DM Sans', sans-serif",
+          }}
+        >
+          SUREALITY
+        </a>
         <div style={{ flex: 1 }} />
         <button
           onClick={handlePreview}

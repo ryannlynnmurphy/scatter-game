@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+.sureality-root {
+  --sure-warmth: 0.35;
+  --sure-rain: 0.55;
+  --sure-open: 0.2;
+  --sure-clutter: 0.15;
+  min-height: 100vh;
+  background: #06060a;
+  color: #e8e4dc;
+}
+
+.sureality-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #1a1520 0%, #06060a 70%);
+  animation: surealityIntroOut 0.9s ease forwards 3s;
+  pointer-events: none;
+}
+
+@keyframes surealityIntroOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.sureality-heart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 120, 120, 0.4), transparent 55%),
+    radial-gradient(circle at center, rgba(80, 20, 40, 0.9), #120810);
+  box-shadow: 0 0 60px rgba(255, 80, 100, 0.25);
+  animation: surealityPulse 0.92s ease-in-out infinite;
+}
+
+@keyframes surealityPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(1.12);
+    opacity: 0.95;
+  }
+}
+
+.sureality-whisper {
+  margin-top: 2rem;
+  font-family: "Bodoni Moda", "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 0.35em;
+  text-transform: lowercase;
+  opacity: 0.7;
+  animation: surealityWhisper 1.8s ease-in-out infinite;
+}
+
+@keyframes surealityWhisper {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.sureality-world {
+  position: relative;
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.sureality-world--visible {
+  opacity: 1;
+}
+
+.sureality-rain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sureality-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.sureality-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.sureality-svg {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  filter: saturate(calc(0.9 + var(--sure-warmth) * 0.25));
+}
+
+.sureality-warm-overlay {
+  fill: rgba(255, 170, 90, 0);
+  animation: surealityLampFlicker 4.2s ease-in-out infinite;
+}
+
+@keyframes surealityLampFlicker {
+  0%,
+  100% {
+    fill: rgba(255, 160, 80, calc(0.03 + var(--sure-warmth) * 0.12));
+  }
+  40% {
+    fill: rgba(255, 190, 120, calc(0.05 + var(--sure-warmth) * 0.16));
+  }
+  55% {
+    fill: rgba(255, 150, 70, calc(0.02 + var(--sure-warmth) * 0.1));
+  }
+}
+
+.sureality-dial-glow {
+  animation: surealityDial 2.8s ease-in-out infinite;
+}
+
+@keyframes surealityDial {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.sureality-header {
+  position: relative;
+  z-index: 5;
+  padding: 2.5rem 1.75rem 0;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sureality-title {
+  font-family: "Bodoni Moda", "Times New Roman", serif;
+  font-size: clamp(2.8rem, 8vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #f0e8dc 0%,
+    #c9a96e 45%,
+    #8b7355 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(201, 169, 110, 0.15);
+}
+
+.sureality-tag {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.78rem;
+  color: rgba(200, 195, 185, 0.55);
+  margin: 0.75rem 0 0;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+.sureality-panel {
+  position: fixed;
+  z-index: 6;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.15rem 1.25rem 1.35rem;
+  border-radius: 4px;
+  background: rgba(12, 10, 16, 0.72);
+  border: 1px solid rgba(201, 169, 110, 0.22);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.sureality-label {
+  display: block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(201, 169, 110, 0.85);
+  margin-bottom: 0.65rem;
+}
+
+.sureality-input {
+  width: 100%;
+  resize: vertical;
+  min-height: 4.5rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #eae6de;
+  background: rgba(6, 5, 10, 0.9);
+  border: 1px solid rgba(90, 85, 100, 0.5);
+  border-radius: 3px;
+  padding: 0.65rem 0.75rem;
+  outline: none;
+}
+
+.sureality-input:focus {
+  border-color: rgba(201, 169, 110, 0.55);
+  box-shadow: 0 0 0 1px rgba(201, 169, 110, 0.12);
+}
+
+.sureality-interpret {
+  margin: 0.75rem 0 0;
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(220, 210, 195, 0.72);
+  line-height: 1.45;
+}
+
+.sureality-back {
+  position: fixed;
+  z-index: 7;
+  top: 1rem;
+  left: 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(200, 195, 185, 0.45);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sureality-back:hover {
+  color: rgba(201, 169, 110, 0.95);
+}
+
+.muted {
+  color: rgba(200, 195, 185, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sureality-intro {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sureality-world {
+    opacity: 1;
+  }
+
+  .sureality-heart,
+  .sureality-whisper,
+  .sureality-warm-overlay,
+  .sureality-dial-glow {
+    animation: none !important;
+  }
+}
