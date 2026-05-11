@@ -12,7 +12,6 @@ export function proxy(request: NextRequest) {
 
   const res = NextResponse.next();
   res.headers.set("X-Scatter-Game", "hzl-game");
-  res.headers.set("X-Scatter-Sureality-Path", "/sureality");
   return res;
 }
 
